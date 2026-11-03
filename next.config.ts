@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || undefined,
+  // Standalone server build: runs as a container on Azure Container Apps.
+  output: "standalone",
   // Match WordPress URLs (/product/slug/) so existing links and SEO keep working.
   trailingSlash: true,
   images: {
