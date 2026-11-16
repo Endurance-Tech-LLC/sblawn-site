@@ -34,7 +34,7 @@ const cols = [
 
 export function SiteFooter() {
   return (
-    <footer className="mt-auto bg-charcoal text-white">
+    <footer className="mt-auto overflow-hidden rounded-t-[2rem] bg-charcoal text-white shadow-[0_-20px_40px_-20px_rgb(15_40_20/0.5)]">
       <div className="stripe-rule" />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-5">
         <div className="md:col-span-2">
