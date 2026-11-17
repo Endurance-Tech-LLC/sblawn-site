@@ -1,35 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-labelledby="t">
   <title id="t">Walk-behind mower with a Lawn Stryper roller</title>
-  <!-- ground shadow -->
   <ellipse cx="205" cy="216" rx="175" ry="10" fill="#000" opacity=".22"/>
-
-  <!-- handle -->
   <path d="M168 150 L84 46" stroke="#231f20" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <rect x="130.313" y="108.454" width="4.839" height="88.278" style="fill-rule: nonzero; paint-order: fill; fill: rgb(36, 31, 32); stroke-miterlimit: 1; stroke-linecap: round; stroke-linejoin: round; stroke: rgb(36, 31, 32);"/>
   <path d="M186 150 L102 46" stroke="#231f20" stroke-width="5" stroke-linecap="round" fill="none" opacity=".55"/>
   <path d="M62 44 H112" stroke="#231f20" stroke-width="12" stroke-linecap="round"/>
   <path d="M66 44 H92" stroke="#5db35c" stroke-width="12" stroke-linecap="round"/>
   <path d="M112 76 Q96 70 92 58" stroke="#231f20" stroke-width="3" fill="none" stroke-linecap="round"/>
-
-  <!-- striper bracket + roller -->
-  <path d="M160 176 L110 196" stroke="#4a4446" stroke-width="7" stroke-linecap="round"/>
-  <path d="M160 166 L118 184" stroke="#4a4446" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 124.009 196.127 L 132.067 196.127" stroke="#231f20" stroke-linecap="round" style="stroke-width: 7px;"/>
   <circle cx="106" cy="196" r="19" fill="#2a6334"/>
   <circle cx="106" cy="196" r="15" fill="#5db35c"/>
   <path d="M95 186 A15 15 0 0 1 117 186" stroke="#fff" stroke-width="3" fill="none" opacity=".45" stroke-linecap="round"/>
   <circle cx="106" cy="196" r="4" fill="#231f20"/>
-
-  <!-- deck -->
   <path d="M150 150 H300 Q340 150 340 180 V188 H150 Q140 188 140 178 V160 Q140 150 150 150 Z" fill="#322e2f"/>
   <path d="M152 156 H298 Q326 156 332 172" stroke="#fff" stroke-width="3" fill="none" opacity=".18" stroke-linecap="round"/>
   <rect x="150" y="176" width="190" height="6" fill="#5db35c"/>
-
-  <!-- engine -->
   <rect x="200" y="112" width="82" height="42" rx="10" fill="#4a4446"/>
   <rect x="210" y="98" width="56" height="20" rx="8" fill="#231f20"/>
   <rect x="226" y="90" width="22" height="10" rx="4" fill="#5db35c"/>
   <path d="M212 126 H270 M212 134 H270 M212 142 H270" stroke="#231f20" stroke-width="3" stroke-linecap="round" opacity=".6"/>
-
-  <!-- wheels -->
   <g>
     <circle cx="178" cy="194" r="22" fill="#231f20"/>
     <circle cx="178" cy="194" r="11" fill="#bdb7b8"/>
