@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { CartProvider } from "@/components/cart";
+import { LawnBackdrop } from "@/components/lawn-backdrop";
+import { ScrollFx } from "@/components/scroll-fx";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
@@ -35,7 +37,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${workSans.variable} ${barlow.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col font-sans">
+      <body className="relative isolate flex min-h-full flex-col font-sans">
+        <LawnBackdrop />
+        <ScrollFx />
         <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-white focus:p-3">
           Skip to content
         </a>

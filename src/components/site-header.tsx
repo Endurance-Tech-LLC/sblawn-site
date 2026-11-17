@@ -3,6 +3,7 @@ import Link from "next/link";
 import { contact, media } from "@/lib/mock-data";
 import { CartButton } from "./cart";
 import { MobileNav } from "./mobile-nav";
+import { MowProgress } from "./mow-progress";
 
 const searchPath = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/search/`;
 
@@ -17,7 +18,7 @@ export const nav = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-black/5 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-40 bg-white/95 shadow-[0_10px_30px_-15px_rgb(15_40_20/0.6)] backdrop-blur">
       <div className="bg-charcoal text-xs text-white/85">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-1.5 sm:px-6">
           <p>
@@ -28,7 +29,7 @@ export function SiteHeader() {
           </a>
         </div>
       </div>
-      <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3 sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 pt-3 pb-4 sm:px-6">
         <Link href="/" className="shrink-0" aria-label="S&B Lawn Systems home">
           <Image src={media.logo} alt="S&B Lawn Systems, Inc." width={180} height={53} priority className="h-11 w-auto" />
         </Link>
@@ -59,6 +60,7 @@ export function SiteHeader() {
           <MobileNav items={nav} />
         </div>
       </div>
+      <MowProgress />
     </header>
   );
 }

@@ -38,3 +38,8 @@ npm run build && npm start
 Charcoal `#322E2F`, turf green `#5DB35C`, dark green `#2A6334`; Barlow Condensed (headings) + Work Sans (body), self-hosted via `@fontsource`. Tokens live in `src/app/globals.css`.
 
 Images currently load from `www.sblawnsystems.com/wp-content/uploads` (allowed in `next.config.ts`); point that at the Azure CDN after media moves to Blob Storage.
+
+## Deploy
+
+Container image built by CI and deployed to Azure Container Apps (staging, then production with approval).
+See `.github/workflows/ci-cd.yml` and `docs/AZURE-SETUP.md`. Local container test: `docker build -t sblawn-site . && docker run -p 3000:3000 sblawn-site`.
