@@ -21,6 +21,9 @@
 body {
   background: var(--color-lawn-base);
   color: var(--color-charcoal);
+  /* Never allow sideways page scroll (animated pieces slide off-screen).
+     `clip`, not `hidden`, so the sticky header keeps working. */
+  overflow-x: clip;
 }
 
 /* ---- Site-wide parallax lawn (see LawnBackdrop / ScrollFx) ---- */
