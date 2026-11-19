@@ -95,7 +95,7 @@ Environment variables (Settings → Environments; create `staging` and `producti
 |---|---|---|
 | `AZURE_RESOURCE_GROUP` | `rg-sblawn-web` | `rg-sblawn-web` |
 | `CONTAINERAPP_NAME` | `ca-sblawn-staging` | `ca-sblawn-production` |
-| `SITE_URL` | staging URL (from `az containerapp show … --query properties.configuration.ingress.fqdn`) | `https://www.sblawnsystems.com` once the custom domain is cut over |
+| `SITE_URL` | staging URL (from `az containerapp show  --name ca-sblawn-staging --resource-group rg-sblawn-web --query properties.configuration.ingress.fqdn --output tsv`) | `https://www.sblawnsystems.com` once the custom domain is cut over |
 
 On the **production** environment, enable **Required reviewers** so deploys wait for approval.
 
