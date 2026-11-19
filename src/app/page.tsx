@@ -49,7 +49,8 @@ export default async function Home() {
   const fromPrice = Math.min(...systems.map((s) => s.priceCents)) / 100;
 
   return (
-    <div className="pb-20">
+    <div className="overflow-x-clip pb-20">
+      {/* overflow-x-clip: the hero mower drives off the right edge as you scroll; clip it there. */}
       {/* Hero — straight on the lawn */}
       <Container className="grid items-center gap-10 pt-10 sm:pt-16 lg:grid-cols-[1.05fr_1fr]">
         <div className="rounded-3xl bg-charcoal/90 p-7 text-white shadow-2xl ring-1 ring-white/10 backdrop-blur sm:p-10">
