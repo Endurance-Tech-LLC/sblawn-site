@@ -29,7 +29,7 @@ jobs:
       - run: npm run lint
       - run: npm run build
 
-  # Main only: build the container image in CI and push it to ACR, tagged with the commit SHA.
+  # Main only: build the production image and push it to ACR, tagged with the commit SHA.
   build-image:
     name: Build and push image
     needs: ci
@@ -56,19 +56,12 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  # Same image goes to staging first, then production after manual approval.
-  staging:
-    name: Staging
-    needs: build-image
-    if: github.ref == 'refs/heads/main'
-    uses: ./.github/workflows/deploy.yml
-    with:
-      environment: staging
-      image: ${{ needs.build-image.outputs.image }}
-
+  # Every merge to main: deploy the image to production. The `production`
+  # environment requires an approval, so the run pauses here until approved.
+  # Staging is separate and on demand: see staging.yml.
   production:
     name: Production
-    needs: [build-image, staging]
+    needs: build-image
     if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/deploy.yml
     with:
